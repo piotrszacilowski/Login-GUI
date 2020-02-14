@@ -30,6 +30,10 @@ public class GIU {
         button.setBounds(10,80,80,25);
         panel.add(button);
 
+        JLabel success = new JLabel("");
+        success.setBounds(10,110,300,25);
+        panel.add(success);
+
         frame.setVisible(true);
     }
 }
