@@ -1,6 +1,8 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class GIU {
+public class GUI implements ActionListener {
     public static void main(String[] args) {
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
@@ -28,12 +30,19 @@ public class GIU {
 
         JButton button = new JButton("Login");
         button.setBounds(10,80,80,25);
+        button.addActionListener(new GUI());
         panel.add(button);
 
         JLabel success = new JLabel("");
         success.setBounds(10,110,300,25);
         panel.add(success);
+        success.setText();
 
         frame.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
     }
 }
